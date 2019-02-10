@@ -29,32 +29,35 @@ public class Login : MonoBehaviour
         string e;
         string p;
         //determine if user is logging in directly, or logging in automatically after signup
+        //IF USE IS LOGGING IN
         if (email.text != "" && Password.text != "")
         {
             e = email.text;
             p = Password.text;
+            PlayerPrefs.SetString("email", e);
+            PlayerPrefs.SetString("password", p);
         }
-        else
+        //IF USER IS GETTING LOGGED IN AUTOMATICALLY AFTER SIGNUP
+        else if (SignupEmail.text != "" && SignupPassword.text != "")
         {
             e = SignupEmail.text;
             p = SignupPassword.text;
+            PlayerPrefs.SetString("email", e);
+            PlayerPrefs.SetString("password", p);
         }
-
-        Debug.Log(PlayerPrefs.GetString("email"));
-        Debug.Log(PlayerPrefs.GetString("password"));
         //this is used for automatically logging you in 
-        if (PlayerPrefs.GetString("email","email") != "email" && PlayerPrefs.GetString("password","password") != "password")
+        //IF USER HAS ALREADY LOGGED IN BEFORE, LOG IN WITH PAST CREDENTIALS
+        else if (PlayerPrefs.GetString("email","email") != "email" && PlayerPrefs.GetString("password","password") != "password")
         {
             e = PlayerPrefs.GetString("email", "email");
             p = PlayerPrefs.GetString("password", "password");
         }
+
         else
         {
-            //sets your email and password for later
-            PlayerPrefs.SetString("email", e);
-            PlayerPrefs.SetString("password", p);
-
+            return;
         }
+
         Debug.Log(PlayerPrefs.GetString("email"));
         Debug.Log(PlayerPrefs.GetString("password"));
         //firebase signin
