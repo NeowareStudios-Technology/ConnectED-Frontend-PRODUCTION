@@ -1,0 +1,26 @@
+{
+  "first_name": "first",
+  "last_name": "last",
+  "email": "email",
+  "passwrd": "password",
+  "education": "college",
+  "interests": [
+    "arts and crafts",
+    "community"
+  ],
+  "skills": [
+    "bilingual",
+    "computers"
+  ],
+  "lat": 10.5,
+  "lon": 50.2,
+  "mon": true,
+  "tue": false,
+  "wed": true,
+  "thu": false,
+  "fri": true,
+  "sat": false,
+  "sun": true,
+  "time_day": "a",
+    "photo":""
+}

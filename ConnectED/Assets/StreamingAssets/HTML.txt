@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In with Auth0</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="https://cdn.auth0.com/styleguide/components/2.0.2/media/logos/img/favicon.png">
+</head>
+<body>
+
+  <!--[if IE 8]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ie8/0.2.5/ie8.js"></script>
+  <![endif]-->
+
+  <!--[if lte IE 9]>
+  <script src="https://cdn.auth0.com/js/base64.js"></script>
+  <script src="https://cdn.auth0.com/js/es5-shim.min.js"></script>
+  <![endif]-->
+
+  <script src="https://cdn.auth0.com/js/lock/10.23.1/lock.min.js"></script>
+  <script>
+    var authParams = JSON.parse(decodeURIComponent(escape(window.atob('eyJwcm90b2NvbCI6Im9hdXRoMiIsInJlc3BvbnNlX3R5cGUiOiJ0b2tlbiIsIl9jc3JmIjoiaFpvT1VhcnMtMHpHU093c0Rpb0tCT1BTc3NfTU9KcFhuWkh3IiwiX2ludHN0YXRlIjoiZGVwcmVjYXRlZCIsInN0YXRlIjoiUlR6WUhqeklWeGNDU05YeGZxU0Q5Vm56cFM2UmhTVXMifQ=='))));
+    var lock = new Auth0Lock(
+      'jW2cYQtmtOwLNUHFpg9BzVSvCRfezOai',
+      'connected-app.auth0.com', {
+        
+        configurationBaseUrl: 'https://cdn.auth0.com/',
+        
+        closable: false,
+        
+        allowedConnections: ['Username-Password-Authentication'],
+        
+        
+        
+        
+        languageDictionary: { title: 'connectED' },
+        
+        theme: {
+          logo: '/img/badge.png'
+        },
+        
+        auth: {
+          redirectUrl: 'https://fleet-fortress-211105.appspot.com/oauth2callback',
+          responseType: 'token',
+          params: authParams
+        },
+        defaultADUsernameFromEmailPrefix: false,
+        overrides: {
+          __tenant: 'connected-app',
+          __token_issuer: 'https://connected-app.auth0.com/'
+        }
+      });
+
+    lock.show();
+  </script>
+</body>
+</html>

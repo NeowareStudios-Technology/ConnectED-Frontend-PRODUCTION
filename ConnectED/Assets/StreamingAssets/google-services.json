@@ -1,0 +1,37 @@
+{
+  "client": [
+    {
+      "services": {
+        "appinvite_service": {
+          "status": 0
+        }, 
+        "analytics_service": {
+          "status": 0
+        }
+      }, 
+      "oauth_client": [
+        {
+          "client_id": "118742092535-9ein0jjh33mq7q3bi2u8l0tku8v9ship.apps.googleusercontent.com"
+        }
+      ], 
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2LBqx9hVdKVX2fbBOHGQVJNQu64qf4yw"
+        }
+      ], 
+      "client_info": {
+        "mobilesdk_app_id": "1:118742092535:ios:6118fd79cf09072a", 
+        "android_client_info": {
+          "package_name": "com.lwa.connected"
+        }
+      }
+    }
+  ], 
+  "configuration_version": "1", 
+  "project_info": {
+    "storage_bucket": "connected-dev-214119.appspot.com", 
+    "project_id": "connected-dev-214119", 
+    "firebase_url": "https://connected-dev-214119.firebaseio.com", 
+    "project_number": "118742092535"
+  }
+}
